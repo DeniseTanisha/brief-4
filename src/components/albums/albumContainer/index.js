@@ -1,4 +1,4 @@
-import albums from "./albums.jsx";
+import AlbumContainer from "./albums.jsx";
 
-export default albums;
+export default AlbumContainer;
 
