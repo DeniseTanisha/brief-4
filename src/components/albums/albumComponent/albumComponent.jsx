@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import { albumTypes } from "../propTypes.js";
+import styles from "./albumComponent.module.scss";
 
 class AlbumComponent extends Component {
-  getDescription = () => {
-    const description = this.props.cardData.description;
-    return description.length > 120
-      ? description.substring(0, 120) + "..."
-      : description;
-  };
+  // getDescription = () => {
+  //   const description = this.props.cardData.description;
+  //   return description.length > 120
+  //     ? description.substring(0, 120) + "..."
+  //     : description;
+  // };
 
-  state = {
-    isFaceUp: true
-  };
+  // state = {
+  //   isFaceUp: true
+  // };
 
-  handleClick = () => {
-    this.setState({
-      isFaceUp: !this.state.isFaceUp
-    });
-  };
+  // handleClick = () => {
+  //   this.setState({
+  //     isFaceUp: !this.state.isFaceUp
+  //   });
+  // };
 
   render() {
     const rotateStyle = this.state.isFaceUp ? "" : styles.albumRotated;

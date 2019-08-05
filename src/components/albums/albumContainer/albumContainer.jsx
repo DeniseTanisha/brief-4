@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import albumComponent from "../albumComponent";
+import AlbumComponent from "../albumComponent";
 import PropTypes from "prop-types";
-import SearchBar from "../../searchBar/searchBar"
+//import SearchBar from "../../searchBar/searchBar"
 
 
 class AlbumContainer extends Component {
@@ -10,8 +10,6 @@ class AlbumContainer extends Component {
       searchText: "",
       filteredList: []
     };
-  
-
           this.setState({
             albums: albums,
             filteredList: albums
@@ -27,7 +25,7 @@ class AlbumContainer extends Component {
     };
   
     filterAlbums = searchText => {
-      return this.state.cards.filter(album => {
+      return this.state..filter(album => {
         const ar = Object.values(album).filter(str => {
           if (typeof str == "string") {
             return str.toLowerCase().includes(searchText.toLowerCase());
@@ -38,24 +36,21 @@ class AlbumContainer extends Component {
       });
     };
   
-    render() {
-      return (
-        <>
-          <SearchBar
-            searchText={this.state.searchText}
-            setSearchText={this.setSearchText}
-          />
+    // render() {
+    //   return (
+    //       <SearchBar
+    //         searchText={this.state.searchText}
+    //         setSearchText={this.setSearchText}
+    //         />
           
-        {this.state.filteredList.map((album, index) => (
-              <AlbumComponent albumData={album} key={index} />
-            ))}
-          </section>
-        </>
-      );
-    }
-  }
+        // this.state.filteredList.map((album, index) => (
+        //       <AlbumComponent albumData={album} key={index} />
+        //     ))}
+
+    //   )
+    // };
+    
+  
   
   
   export default AlbumContainer;
-
-  
