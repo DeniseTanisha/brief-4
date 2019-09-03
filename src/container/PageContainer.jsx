@@ -5,6 +5,8 @@ class Page extends Component {
     render() { 
         return ( 
         
+            
+let AllAlbums = AlbumComponent.map ((album, index) => (<AlbumComponent albumData={album} key={index} /> ));
         
             );
     }

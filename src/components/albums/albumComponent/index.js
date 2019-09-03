@@ -1,4 +1,4 @@
-import AlbumComponent from "./albums.jsx";
+import AlbumComponent from "./albumComponent";
 
 export default AlbumComponent;
 
